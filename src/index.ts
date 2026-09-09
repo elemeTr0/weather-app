@@ -1,6 +1,6 @@
 async function getWeather() 
 {
-    const API_KEY = '2ad9a034422cd9c0b2561e7b7c0eda2c';
+    const API_KEY = process.env.API_KEY;
 
     const locresponse = await fetch("https://ipapi.co/json/");
     const location = await locresponse.json();
