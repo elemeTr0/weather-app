@@ -1,14 +1,15 @@
+console.log(import.meta.env.VITE_WEATHER_API_KEY);
+
 async function getWeather() 
 {
-    const API_KEY = process.env.API_KEY;
-
+    const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
     const locresponse = await fetch("https://ipapi.co/json/");
     const location = await locresponse.json();
     const city = location.city
     const country = location.country
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
 
 document.getElementById("location")!.innerHTML = `${city}, ${country}`
 

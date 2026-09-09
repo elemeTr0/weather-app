@@ -1,0 +1,26 @@
+{
+  "name": "weather_api",
+  "version": "1.0.0",
+  "description": "typescript + API fetch practice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemeTr0/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elemeTr0/weather-app/issues"
+  },
+  "homepage": "https://github.com/elemeTr0/weather-app#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "vite": "^8.2.2"
+  }
+}
