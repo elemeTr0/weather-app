@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="yesterday">
-        <span>Yesterday: </span>
-        <p>??</p>
+    <div class="container">
+        <div class="main panel">
+            <img class="main__icon" id="image" src="" alt="icon">
+            <div class="main__info">
+                <span class="label" id="location">Current</span>
+                <p class="temp" id="rn">??</p>
+            </div>
+        </div>
+
+        <div class="smallpanels">
+            <div class="small_panel panel">
+                <span class="label">Yesterday</span>
+                <p class="value">??</p>
+            </div>
+
+            <div class="small_panel panel">
+                <span class="label">Feels like</span>
+                <p class="value" id="feels">??</p>
+            </div>
+        </div>
     </div>
 
-    <div class="today">
-        <span>Today: </span>
-        <p id="tempT">??</p>
-    </div>
-
-    <div class="feel">
-        <span >Feels like: </span>
-        <p id="feels">??</p>
-    </div>
     <script type="module" src="dist/index.js"></script>
 </body>
 </html>

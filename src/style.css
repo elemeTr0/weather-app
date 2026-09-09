@@ -1,0 +1,106 @@
+:root{
+    --bgLight: #93d1ff;
+    --bgMid: #60bafd;
+    --bgDark: #0d97ff;
+
+    --panel-bg: rgba(0, 0, 0, 0.09);
+    --panel-border: rgba(0, 0, 0, 0.02);
+    --panel-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --panel-blur: 19.7px;
+    --panel-radius: 16px;
+
+    --gap: 0.625rem;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Google Sans", sans-serif;
+    color: white;
+    background: linear-gradient(180deg, var(--bgDark) 0%, var(--bgMid) 60%, var(--bgLight) 100%);
+}
+
+.container{
+    width: min(90vw, 50rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.panel{
+    border-radius: var(--panel-radius);
+    background: var(--panel-bg);
+    box-shadow: var(--panel-shadow);
+    backdrop-filter: blur(var(--panel-blur));
+    border: 1px solid var(--panel-border);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: end;
+    gap: 1.5rem;
+    padding: 2rem;
+    min-height: 20rem;
+}
+
+.main__icon{
+    height: 60%;
+    max-height: 10rem;
+}
+
+.main__info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label{
+    font-size: 1.25rem;
+    opacity: 0.85;
+}
+
+.temp{
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.smallpanels{
+    display: flex;
+    gap: var(--gap);
+}
+
+.small_panel{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    min-height: 9.375rem;
+}
+
+.value{
+    align-self: flex-end;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 30rem){
+    .container{ width: 95vw; }
+    .main{ padding: 1.25rem; gap: 1rem; }
+    .main__icon{ max-height: 7rem; }
+    .temp{ font-size: clamp(2.5rem, 12vw, 5rem); }
+    .small_panel{ padding: 0.75rem; }
+    .value{ font-size: 1.75rem; }
+}
