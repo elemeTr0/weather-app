@@ -1,8 +1,8 @@
-console.log(import.meta.env.VITE_WEATHER_API_KEY);
+console.log(import.meta.env.VITE_API_KEY);
 
 async function getWeather() 
 {
-    const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
+    const API_KEY = import.meta.env.VITE_API_KEY;
     const locresponse = await fetch("https://ipapi.co/json/");
     const location = await locresponse.json();
     const city = location.city
